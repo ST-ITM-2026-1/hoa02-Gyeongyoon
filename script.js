@@ -46,3 +46,78 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+// ===== GitHub Profile & Repos =====
+const GITHUB_USERNAME = 'Gyeongyoon';
+
+async function fetchGitHubProfile() {
+    try {
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
+        if (!response.ok) throw new Error('Failed to fetch profile');
+        const data = await response.json();
+
+        const profileSection = document.getElementById('github-profile');
+        if (!profileSection) return;
+
+        profileSection.innerHTML = `
+            <div class="github-profile-card">
+                <img src="${data.avatar_url}" alt="${data.name}" class="github-avatar">
+                <div class="github-profile-info">
+                    <h2>${data.name}</h2>
+                    <p class="github-bio">${data.bio || ''}</p>
+                    <div class="github-stats">
+                        <div class="stat">
+                            <span class="stat-number">${data.public_repos}</span>
+                            <span class="stat-label">Repos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">${data.followers}</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">${data.following}</span>
+                            <span class="stat-label">Following</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    } catch (error) {
+        document.getElementById('github-profile').innerHTML = 
+            `<p class="error">Failed to load profile. Please try again later.</p>`;
+    }
+}
+
+async function fetchGitHubRepos() {
+    try {
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated`);
+        if (!response.ok) throw new Error('Failed to fetch repos');
+        const repos = await response.json();
+
+        const reposGrid = document.getElementById('repos-grid');
+        if (!reposGrid) return;
+
+        reposGrid.innerHTML = repos.map(repo => `
+            <div class="repo-card">
+                <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                <p class="repo-description">${repo.description || 'No description'}</p>
+                <div class="repo-info">
+                    <span class="repo-language">${repo.language || 'N/A'}</span>
+                    <span>⭐ ${repo.stargazers_count}</span>
+                    <span>🍴 ${repo.forks_count}</span>
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        document.getElementById('repos-grid').innerHTML = 
+            `<p class="error">Failed to load repositories. Please try again later.</p>`;
+    }
+}
+
+// github.html에서만 실행
+if (document.getElementById('github-profile')) {
+    fetchGitHubProfile();
+    fetchGitHubRepos();
+}
