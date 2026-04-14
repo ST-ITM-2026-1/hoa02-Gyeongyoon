@@ -84,3 +84,7 @@ Extend your static portfolio (from Assignment 1) by integrating interactive and 
 
 - A GitHub repository (via GitHub Classroom) with JavaScript enhancements.  
 - Updated live version of your portfolio on GitHub Pages.
+
+
+## Live Demo
+https://st-itm-2026-1.github.io/hoa02-Gyeongyoon/
