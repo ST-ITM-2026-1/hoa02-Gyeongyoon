@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,55 +26,91 @@
         </nav>
 
     </header>
-        <main>
-            <h1>Projects</h1>
-            <div class="projects-grid">
+    <main>
+        <h1>Projects</h1>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="All">All</button>
+            <button class="filter-btn" data-filter="Dev">Dev</button>
+            <button class="filter-btn" data-filter="Research">Research</button>
+            <button class="filter-btn" data-filter="Study">Study</button>
+            <button class="filter-btn" data-filter="AI">AI</button>
+            <button class="filter-btn" data-filter="Finance">Finance</button>
+            <button class="filter-btn" data-filter="Java">Java</button>
+            <button class="filter-btn" data-filter="OpenSource">OpenSource</button>
+        </div>
+        <div class="projects-grid">
 
-                <div class="project-card">
-                    <img src="assets/images/oss.png" alt="Minimanimo">
-                    <div class="project-info">
-                        <h3>Minimanimo: Open Source SW Project</h3> 
+            <div class="project-card" data-category="Dev Frontend OpenSource">
+                <img src="assets/images/oss.png" alt="Minimanimo">
+                <div class="project-info">
+                    <h3>Minimanimo: Open Source SW Project</h3>
+                    <div class="project-tags">
+                        <span class="tag">Dev</span>
+                        <span class="tag">Frontend</span>
+                        <span class="tag">OpenSource</span>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <img src="assets/images/GC.png" alt="Global Challenger">
-                    <div class="project-info">
-                        <h3>Global Challenger</h3>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="assets/images/NU.png" alt="Human-AI Hybrid Heuristic Analysis">
-                    <div class="project-info">
-                        <h3>Human-AI Hybrid Heuristic Analysis</h3>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/images/java.png" alt="자바를 자바라">
-                    <div class="project-info">
-                        <h3>학습동아리 - 자바를 자바라 (우수동아리 선정 - 총장상 수상)</h3>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/images/console.png" alt="콘솔 게임">
-                    <div class="project-info">
-                        <h3>자바 기반 콘솔 게임 프로젝트</h3>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/images/AP.png" alt="재무 분석">
-                    <div class="project-info">
-                        <h3>재무 분석 및 투자 판단 프로젝트</h3>
-                    </div>
-                </div>
-
-
-
             </div>
-        </main>
+
+            <div class="project-card" data-category="Research Strategy">
+                <img src="assets/images/GC.png" alt="Global Challenger">
+                <div class="project-info">
+                    <h3>Global Challenger</h3>
+                    <div class="project-tags">
+                        <span class="tag">Research</span>
+                        <span class="tag">Strategy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="Research AI">
+                <img src="assets/images/NU.png" alt="Human-AI Hybrid Heuristic Analysis">
+                <div class="project-info">
+                    <h3>Human-AI Hybrid Heuristic Analysis</h3>
+                    <div class="project-tags">
+                        <span class="tag">Research</span>
+                        <span class="tag">AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="Study Java">
+                <img src="assets/images/java.png" alt="자바를 자바라">
+                <div class="project-info">
+                    <h3>학습동아리 - 자바를 자바라 (우수동아리 선정 - 총장상 수상)</h3>
+                    <div class="project-tags">
+                        <span class="tag">Study</span>
+                        <span class="tag">Java</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="Dev Java">
+                <img src="assets/images/console.png" alt="콘솔 게임">
+                <div class="project-info">
+                    <h3>자바 기반 콘솔 게임 프로젝트</h3>
+                    <div class="project-tags">
+                        <span class="tag">Dev</span>
+                        <span class="tag">Java</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="Research Finance">
+                <img src="assets/images/AP.png" alt="재무 분석">
+                <div class="project-info">
+                    <h3>재무 분석 및 투자 판단 프로젝트</h3>
+                    <div class="project-tags">
+                        <span class="tag">Research</span>
+                        <span class="tag">Finance</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
     <footer>
         <p>2026 Gyeongyoon Kim myPortfolio</p>
 
