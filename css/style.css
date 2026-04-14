@@ -366,3 +366,20 @@ form input[type="submit"]:hover {
         grid-template-columns: 1fr;
     }
 }
+
+#theme-toggle {
+    background: none;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
