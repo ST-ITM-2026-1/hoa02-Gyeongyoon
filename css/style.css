@@ -368,20 +368,34 @@ form input[type="submit"]:hover {
 }
 
 #theme-toggle {
-    background: none;
-    border: 2px solid var(--accent-color);
-    color: var(--accent-color);
-    padding: 6px 14px;
+    width: 52px;
+    height: 28px;
+    background-color: #cccccc;
+    border: none;
     border-radius: 999px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s;
+    position: relative;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
 }
 
-#theme-toggle:hover {
+#theme-toggle .toggle-slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+body.dark-mode #theme-toggle {
     background-color: var(--accent-color);
-    color: white;
+}
+
+body.dark-mode #theme-toggle .toggle-slider {
+    transform: translateX(24px);
 }
 
 /* Filter Buttons */
@@ -539,4 +553,17 @@ form input[type="submit"]:hover {
 .error {
     color: var(--primary-color);
     font-weight: 600;
+}
+
+.theme-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#theme-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color);
+    white-space: nowrap;
 }

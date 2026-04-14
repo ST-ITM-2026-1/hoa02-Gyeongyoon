@@ -1,26 +1,27 @@
 // ===== Theme Switcher =====
 function toggleTheme() {
     const body = document.body;
-    const btn = document.getElementById('theme-toggle');
+    const label = document.getElementById('theme-label');
 
     body.classList.toggle('dark-mode');
 
     if (body.classList.contains('dark-mode')) {
-        btn.textContent = 'Light';
+        label.textContent = '🌙 Dark';
         localStorage.setItem('theme', 'dark');
     } else {
-        btn.textContent = 'Dark';
+        label.textContent = '☀️ Light';
         localStorage.setItem('theme', 'light');
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('theme');
-    const btn = document.getElementById('theme-toggle');
+    const label = document.getElementById('theme-label');
     if (saved === 'dark') {
         document.body.classList.add('dark-mode');
-        btn.textContent = 'Light';
+        label.textContent = '🌙 Dark';
     }
+    
 
     // ===== Project Filtering =====
     const filterBtns = document.querySelectorAll('.filter-btn');

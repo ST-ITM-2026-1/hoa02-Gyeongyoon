@@ -24,7 +24,12 @@
                 <li><a href="github.html">GitHub</a></li>
 
             </ul>
-            <button id="theme-toggle" onclick="toggleTheme()">Dark</button>
+            <div class="theme-toggle-wrapper">
+                <span id="theme-label">☀️ Light</span>
+                <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <span class="toggle-slider"></span>
+                </button>
+            </div>
         </nav>
 
     </header>

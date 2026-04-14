@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -22,12 +23,17 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="github.html">GitHub</a></li>
             </ul>
-            <button id="theme-toggle" onclick="toggleTheme()">Dark</button>
+            <div class="theme-toggle-wrapper">
+                <span id="theme-label">☀️ Light</span>
+                <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <span class="toggle-slider"></span>
+                </button>
+            </div>
         </nav>
 
     </header>
 
-    
+
     <main>
         <section class="hero">
             <img src="assets/images/profile.png" alt="Gyeongyoon Kim">
@@ -35,24 +41,25 @@
                 <h1>Gyeongyoon Kim</h1>
                 <p>Hi! I'm Gyeongyoon Kim.</p>
                 <p>I'm passionate about bridging technology, data, people to create better IT services.</p>
-                <p>Through broadcasting, marketing, and content planning experiences, I've been exploring how to deliver information effectively and build services that truly matter.</p>
+                <p>Through broadcasting, marketing, and content planning experiences, I've been exploring how to deliver
+                    information effectively and build services that truly matter.</p>
             </div>
         </section>
         <section class="education">
             <h2>Education</h2>
-    
+
             <div class="edu-card">
-               <h3>🇰🇷 Seoul National University of Science and Technology</h3>
-               <p><span class="location">Seoul, South Korea</span></p>
-               <p>Department of Industrial Engineering — IT Management (Dual Degree Program)</p>
-               <p>March 2024 – Present (Expected graduation February 2028)</p>
+                <h3>🇰🇷 Seoul National University of Science and Technology</h3>
+                <p><span class="location">Seoul, South Korea</span></p>
+                <p>Department of Industrial Engineering — IT Management (Dual Degree Program)</p>
+                <p>March 2024 – Present (Expected graduation February 2028)</p>
             </div>
 
-             <div class="edu-card">
-               <h3>🇬🇧 Northumbria University</h3>
-               <p><span class="location">Newcastle, United Kingdom</span></p>
-               <p>B.A. (Hons) in IT Management</p>
-               <p>March 2024 – Present (Expected graduation February 2028)</p>
+            <div class="edu-card">
+                <h3>🇬🇧 Northumbria University</h3>
+                <p><span class="location">Newcastle, United Kingdom</span></p>
+                <p>B.A. (Hons) in IT Management</p>
+                <p>March 2024 – Present (Expected graduation February 2028)</p>
             </div>
         </section>
 
@@ -64,7 +71,8 @@
                 <p class="role">Head of Production Department</p>
                 <p><span class="location">Mar 2024 – Dec 2025</span></p>
                 <ul>
-                    <li>Oversaw production of campus broadcasts and news content across radio, reels, and video formats</li>
+                    <li>Oversaw production of campus broadcasts and news content across radio, reels, and video formats
+                    </li>
                     <li>Wrote weekly audio news scripts and directed 30-minute evening radio programs</li>
                     <li>Produced 3 original talk show & comedy series (5 episodes each)</li>
                     <li>Covered live events including university basketball tournaments and student council debates</li>
@@ -90,7 +98,8 @@
                 <p><span class="location">Apr 2025 – Present</span></p>
                 <ul>
                     <li>Represented ITM major at university fairs in Icheon, Yongin, and Suwon</li>
-                    <li>Planned and led a major experience camp activity: "Capture the Public's Heart! Create Your Own AI Personality Test"</li>
+                    <li>Planned and led a major experience camp activity: "Capture the Public's Heart! Create Your Own
+                        AI Personality Test"</li>
                 </ul>
             </div>
 
