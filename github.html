@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myPortfolio - Contact</title>
+    <title>myPortfolio - GitHub</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,30 +22,31 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="github.html">GitHub</a></li>
             </ul>
-            <button id="theme-toggle" onclick="toggleTheme()">Dark</button>
+            <button id="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
         </nav>
-
     </header>
+
     <main>
-        <h1>Contact</h1>
-        <form action="#" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name">
+        <h1>GitHub</h1>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email address">
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your message"></textarea>
+        <section id="github-profile">
+            <p>Loading profile...</p>
+        </section>
 
-            <input type="submit" value="Send">
-        </form>
 
+        <section id="github-repos">
+            <h2>Repositories</h2>
+            <div id="repos-grid">
+                <p>Loading repositories...</p>
+            </div>
+        </section>
     </main>
+
     <footer>
         <p>2026 Gyeongyoon Kim myPortfolio</p>
-
     </footer>
+
     <script src="script.js"></script>
 </body>
 
